@@ -6,8 +6,14 @@
 .title {
   display: block;
   margin: 0 auto;
-  padding: 1em;
+  padding: 1em 1em 0 1em;
   width: fit-content;
+}
+
+p {
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
 }
 
 .array-container {
@@ -25,7 +31,6 @@
 
 .array-bar {
   width: 28px;
-  background-color: blueviolet;
   margin: 0 5px;
   border-radius: 0.1em;
   border: solid black 1px;
