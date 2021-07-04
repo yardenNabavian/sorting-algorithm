@@ -21,6 +21,7 @@ const SortingVisualizer = () => {
     for (let i = 0; i < animations.length; i++) {
       const arrayBars = document.getElementsByClassName("array-bar");
       const isColorChange = i % 3 !== 2;
+
       if (isColorChange) {
         const [barOneIdx, barTwoIdx] = animations[i];
         const barOneStyle = arrayBars[barOneIdx].style;
@@ -29,13 +30,13 @@ const SortingVisualizer = () => {
         setTimeout(() => {
           barOneStyle.backgroundColor = color;
           barTwoStyle.backgroundColor = color;
-        }, i * 20);
+        }, i * 30);
       } else {
         setTimeout(() => {
           const [barOneIdx, newHeight] = animations[i];
           const barOneStyle = arrayBars[barOneIdx].style;
           barOneStyle.height = `${newHeight}px`;
-        }, i * 20);
+        }, i * 30);
       }
     }
   };
@@ -61,8 +62,12 @@ const SortingVisualizer = () => {
           <div>Loading...</div>
         )}
       </div>
-      <button onClick={resetArray}>Reset Array</button>
-      <button onClick={mergSort}>Sort</button>
+      <button id="reset" onClick={resetArray}>
+        Reset Array
+      </button>
+      <button id="sort" onClick={mergSort}>
+        Sort
+      </button>
     </div>
   );
 };
